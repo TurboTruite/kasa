@@ -10,7 +10,7 @@ function Collapse({collapseTitle, collapseContent}) {
             <div className="collapse-header">
                 <p>{collapseTitle}</p>
                 <button onClick={() => open ? setOpen(false) : setOpen(true)}>
-                    <img src={arrow} className={open ? "open" : ""}/>
+                    <img src={arrow} className={open ? "open" : ""} alt="bouton flèche"/>
                 </button>
             </div>
 
