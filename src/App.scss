@@ -93,7 +93,7 @@ $kasa-red: #FF6060;
   justify-content: center;
   align-items: center;
   height: 223px;
-  margin: 50px auto 0 auto;
+  margin: 50px auto 38px auto;
   border-radius: 25px;
   width: 1240px;
   overflow: hidden;
@@ -122,7 +122,7 @@ $kasa-red: #FF6060;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 60px;
-  margin: 43px auto 50px auto;
+  margin: 5px auto 50px auto;
   padding: 56px 50px 43px 50px;
   width: 1140px;
   background-color: #F7F7F7;
@@ -147,5 +147,70 @@ $kasa-red: #FF6060;
     @include basic-font;
     font-size: 18px;
     color: white;
+  }
+}
+
+.collapse {
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  width: 1013px;
+  border-radius: 5px;
+  margin: 15px auto;
+
+
+  >div.collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $kasa-red;
+    border-radius: 5px;
+    border: 0px;
+    padding: 15px;
+
+    >p {
+      @include basic-font;
+      color: white;
+      font-size: 32px;
+      margin: 0;
+    }
+
+    >button {
+      border: 0;
+      background-color: $kasa-red;
+
+      >img {
+        margin: 0 6px;
+        transform: rotate(0);
+        transition: transform 300ms ease-in-out;
+  
+        &.open {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+  }
+
+  >div.collapse-body {
+    background-color: #F7F7F7;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+    height: 0;
+    transform: scaleY(0);
+    transition: transform 300ms ease-in-out;
+    transform-origin: top;
+
+    &.open {
+      height: auto;
+      transform: scaleY(1);
+
+    }
+
+    >p {
+      @include basic-font;
+      color: $kasa-red;
+      margin: 0;
+    }
   }
 }
