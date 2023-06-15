@@ -11,7 +11,7 @@ function Home() {
         <div>
             <Header />
             <Banner />
-            <div className='background'>
+            <div className='cards-background'>
                 <CardsList />
             </div>
             <Footer />
