@@ -1,5 +1,16 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer"
+
 function PageNotFound() {
- return <h1>404</h1>
+ return (
+    <div className="notFound">
+        <Header />
+        <p className="title">404</p>
+        <p>Oups ! La page que vous demandez n'existe pas.</p>
+        <a href="./">Retourner sur la page d'accueil</a>
+        <Footer />
+    </div>
+ )
 }
 
 export default PageNotFound;

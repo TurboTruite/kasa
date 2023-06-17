@@ -214,3 +214,31 @@ $kasa-red: #FF6060;
     }
   }
 }
+
+.notFound{
+  >.title {
+    font-family: 'Montserrat', sans-serif;
+    color: $kasa-red;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 288px;
+    text-align: center;
+    margin: 139px 0;
+  }
+
+  >p {
+    @include basic-font;
+    font-size: 36px;
+    color: $kasa-red;
+    text-align: center;
+  }
+
+  >a {
+    @include basic-font;
+    color: $kasa-red;
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    margin: 139px 0;
+  }
+} 
