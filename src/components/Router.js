@@ -12,9 +12,11 @@ function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/logement" element={<Logement />} />
+                <Route path="/logement/:linkId" element={<Logement />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/pageNotFound" element={<PageNotFound />} />
                 <Route path="*" element={<PageNotFound />} />
+
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
