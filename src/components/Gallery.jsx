@@ -1,4 +1,3 @@
-import logements from "../data/logements.json"
 import leftArrow from "../assets/left-arrow.png"
 import rightArrow from "../assets/right-arrow.png"
 import { useState } from "react"
@@ -7,7 +6,6 @@ import { useState } from "react"
 const Gallery = ({logement}) => {
 
     const [current, setCurrent] = useState(0)
-
     const pictures = logement[0].pictures
     const length = pictures.length
 
@@ -19,10 +17,8 @@ const Gallery = ({logement}) => {
         setCurrent(current === 0 ? length - 1 : current - 1)
     }
 
-
     return (
         <div className="gallery">
-
             <div className="galleryNav">
                 <img src={leftArrow} className={length === 1 ? "leftArrow hidden" : "leftArrow"} alt='left Arrow' onClick={prevImg}/>
                 <img src={rightArrow} className={length === 1 ? "rightArrow hidden" : "rightArrow"} alt='right arrow' onClick={nextImg}/>
@@ -37,18 +33,8 @@ const Gallery = ({logement}) => {
                     alt='photos logement' />
                 )
             })}
-
-
-            
-
-
         </div>
     )
-
-
 }
-
-
-
 
 export default Gallery
