@@ -7,7 +7,7 @@ function Header() {
             <img src={logo} alt='logo Kasa'></img>
             <div className='navbar'>
                 <a href='../'>Accueil</a>
-                <a href='./about'>A Propos</a>
+                <a href='../about'>A Propos</a>
             </div>
         </div>
     )

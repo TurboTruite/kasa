@@ -67,13 +67,13 @@ function Logement() {
                     </div>
                 </div>
                 <div className='logement-collapses'>
-                    <Collapse collapseTitle='Description' collapseContent={logement[0].description} />
+                    <Collapse collapseTitle='Description' collapseContent={<p>{logement[0].description}</p>} />
                     <Collapse 
                         collapseTitle='Équipements' 
                         collapseContent={
                         <ul className='equipements'>
                             {equipements.map((equipement) => {
-                                return <li id={equipement}>{equipement}</li>
+                                return <li key={equipement}>{equipement}</li>
                             }
                             )}
                         </ul>} />

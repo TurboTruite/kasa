@@ -249,7 +249,7 @@ $kasa-red: #FF6060;
   display: flex;
   height: 415px;
   width: 1240px;
-  margin: 50px auto;
+  margin: 50px auto 24px auto;
   position: relative;
 
 
@@ -306,6 +306,115 @@ $kasa-red: #FF6060;
 
       &.hidden {
         display: none;
+      }
+    }
+  }
+
+}
+
+.logement-content {
+  width: 1240px;
+  margin: auto;
+
+  >.logement-header {
+    display: flex;
+
+    >.logement-header-gauche {
+      display: flex;
+      flex: 1 1 auto;
+      flex-direction: column;
+
+      >h2{
+        margin: 0;
+        @include basic-font;
+        color: $kasa-red;
+        font-size: 36px;
+        margin-top: 8px;
+      }
+
+      >p{
+        @include basic-font;
+        color: $kasa-red;
+        font-size: 18px;
+        margin: 5px 0;
+      }
+
+      >ul{
+        display: flex;
+        list-style-type: none;
+        padding-inline: 0;
+        gap: 10px;
+
+        >li{
+          background-color: $kasa-red;
+          @include basic-font;
+          color: white;
+          border-radius: 10px;
+          padding: 5px 30px;
+        }
+      }
+    }
+
+    >.logement-header-droite {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      flex: 1 1 auto;
+
+      >.user {
+        display: flex;
+        align-items: center;
+
+        >p{
+          display: block;
+          max-width: 100px;
+          @include basic-font;
+          color: $kasa-red;
+          word-spacing: 3000px;
+          text-align: right;
+          line-height: 26px;
+          margin: 0 10px 0 0;
+        }
+
+        >img{
+          width: 64px;
+          height: 64px;
+          border-radius: 50%;
+        }
+      }
+
+      >.rating {
+        display: flex;
+        gap: 10px;
+        margin: 30px 0 0 0;
+      }
+    }
+  }
+
+  >.logement-collapses {
+    display: flex;
+    gap: 76px;
+
+    >.collapse {
+      flex: 1 1 auto;
+
+      > div.collapse-body {
+        padding: 25px 15px;
+      }
+
+      >.collapse-header p{
+        font-size: 18px !important; 
+      }
+
+      >.collapse-body ul{
+        list-style-type: none;
+        padding-inline: 0;
+        margin-block: 0;
+
+        >li{
+          @include basic-font;
+          color: $kasa-red;
+        }
       }
     }
   }

@@ -15,7 +15,7 @@ function Collapse({collapseTitle, collapseContent}) {
             </div>
 
             <div className={open ? "collapse-body open" : "collapse-body"}>
-                <p>{collapseContent}</p>
+                {collapseContent}
             </div>
 
         </div>
