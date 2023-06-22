@@ -11,16 +11,20 @@ import Collapse from '../components/Collapse'
 
 function Logement() {
 
+
     const { linkId } = useParams()
+
+    if (!logements.map(logement => logement.id).includes(linkId)) {
+        return <Navigate to="/pageNotFound"/>
+    }
+
     const logement = logements.filter((logement) => logement.id === linkId)
     const tags = logement[0].tags
     const redStars = parseInt(logement[0].rating)
     const greyStars = 5 - redStars
     const equipements = logement[0].equipments
 
-    if (!logements.map(logement => logement.id).includes(linkId)) {
-        return <Navigate to="/pageNotFound"/>
-    }
+
 
     const RedStars = () => {
         let redStarsArray = []

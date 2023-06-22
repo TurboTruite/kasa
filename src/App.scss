@@ -39,7 +39,10 @@
 
 /* Ca commence là */
 
+
+
 $kasa-red: #FF6060;
+$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.5) 100%);
 @mixin basic-font {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
@@ -47,14 +50,25 @@ $kasa-red: #FF6060;
 
 .header {
   max-width: 1240px;
+  padding: 0 50px;
+  
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 45px;
 
+  @media (max-width: 480px) {
+    margin: 20px 20px 0 20px;
+    padding: 0;
+  }
+  
   >img {
     height: 68px;
+
+    @media (max-width: 480px) {
+      height: 47px;
+    }
   }
 
 }
@@ -69,9 +83,19 @@ $kasa-red: #FF6060;
   padding: 66px 0 30px 0;
   gap: 30px;
 
+  @media (max-width: 480px) {
+    gap: 0;
+  }
+
   >p {
     color: white;
     @include basic-font;
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      width: 134px;
+      text-align: center;
+    }
   }
 }
 
@@ -79,11 +103,23 @@ $kasa-red: #FF6060;
   display:flex;
   gap: 57px;
 
+  @media (max-width: 480px) {
+    gap: 26px;
+  }
+
   >a {
     @include basic-font;
     text-decoration: none;
     color: $kasa-red;
     font-size: 24px;
+    &.active {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 12px;
+      text-transform: uppercase;
+    }
   }
 }
 
@@ -95,14 +131,23 @@ $kasa-red: #FF6060;
   height: 223px;
   margin: 50px auto 38px auto;
   border-radius: 25px;
-  width: 1240px;
+  max-width: 1240px;
   overflow: hidden;
   background-color: black;
+
+  @media (max-width: 480px) {
+    height: 111px;
+    max-width: 100%;
+    margin: 27px 20px 0 20px;
+    border-radius: 10px;
+  }
 
   >img {
     flex-shrink:0;
     min-height:100%;
+    width: 100%;
     opacity: 0.7;
+    object-fit: cover;
   }
 
   >h1 {
@@ -110,6 +155,12 @@ $kasa-red: #FF6060;
     @include basic-font;
     font-size: 48px;
     color: white;
+
+    @media (max-width: 480px) {
+      max-width: 100%;
+      font-size: 24px;
+      margin: 36px;
+    }
   }
 }
 
@@ -120,13 +171,23 @@ $kasa-red: #FF6060;
 .cards-background {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content:space-around;
   gap: 60px;
   margin: 5px auto 50px auto;
   padding: 56px 50px 43px 50px;
-  width: 1140px;
+  max-width: 1140px;
   background-color: #F7F7F7;
   border-radius: 25px;
+
+  @media (max-width: 480px) {
+    background-color: white;
+    // padding: 0 19.5px;
+    flex-direction: column;
+    padding: 22px 19.5px 0 19.5px;
+    gap: 20px;
+
+    max-width: 100%;
+  }
 }
 
 .cards-background::after {
@@ -134,28 +195,79 @@ $kasa-red: #FF6060;
   flex: auto;
 }
 
-.background--card {
+.card {
+
   display: flex;
   align-items: flex-end;
-  width: 300px;
-  height: 300px;
-  background: linear-gradient(180deg, $kasa-red 0%, rgba(0, 0, 0, 0.5) 100%);
-  border-radius: 10px;
-  padding: 20px;
+  max-width: 340px;
+  // width: 100%;
+  height: 340px;
 
-  >a {
-    @include basic-font;
-    font-size: 18px;
-    color: white;
-    text-decoration: none;
+  @media (max-width: 480px) {
+    max-width: 100%;
+    width: 100%;
+    height: 255px;
+  }
+
+
+  >img {
+    // max-width: 300px;
+    // width: 100%;
+    // height: 300px;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+
+    @media (max-width: 480px) {
+      // max-width: 100%;
+      // height: 255px;
+    }
+  }
+
+  .background--card {
+    display: flex;
+    align-items: flex-end;
+    max-width: 300px;
+    max-height: 300px;
+    width: 100%;
+    height: 100%;
+    background: $gradient;
+    position: absolute;
+    border-radius: 10px;
+    padding: 20px;
+    // object-fit: cover;
+    
+  
+    @media (max-width: 480px) {
+      // max-width: 295px;
+      // max-height: 215px;
+      // max-width: calc(100%);
+      // max-height: calc(100% - 40px);
+      max-width: calc(100% - 79.5px);
+      // width: calc(100% - 40px);
+
+      height: 215px;
+    }
+  
+    
+  
+    >a {
+      @include basic-font;
+      font-size: 18px;
+      color: white;
+      text-decoration: none;
+      
+    }
   }
 }
+
 
 .collapse {
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  width: 1013px;
+  max-width: 1013px;
   border-radius: 5px;
   margin: 15px auto;
 
@@ -248,9 +360,16 @@ $kasa-red: #FF6060;
 .gallery {
   display: flex;
   height: 415px;
-  width: 1240px;
+  width: 100%;
+  max-width: 1240px;
   margin: 50px auto 24px auto;
   position: relative;
+
+  @media (max-width: 480px) {
+    margin: 50px 20px 24px 20px;
+    max-width: 100%;
+    max-height: 355px;
+  }
 
 
 
@@ -258,12 +377,19 @@ $kasa-red: #FF6060;
     object-fit: cover;
     border-radius: 25px;
     height: 415px;
-    width: 1240px;
+    width: 100%;
+    max-width: 1240px;
     opacity: 0;
     position: absolute;
 
     &.active {
       opacity: 1;
+    }
+
+    @media (max-width: 480px) {
+
+      max-width: calc(100% - 20px);
+      max-height: 355px;
     }
   }
 
@@ -313,11 +439,15 @@ $kasa-red: #FF6060;
 }
 
 .logement-content {
-  width: 1240px;
+  max-width: 1240px;
   margin: auto;
 
   >.logement-header {
     display: flex;
+    @media (max-width: 480px) {
+      flex-direction: column;
+    }
+
 
     >.logement-header-gauche {
       display: flex;
@@ -330,6 +460,10 @@ $kasa-red: #FF6060;
         color: $kasa-red;
         font-size: 36px;
         margin-top: 8px;
+
+        @media (max-width: 480px) {
+          font-size: 18px;
+        }
       }
 
       >p{
@@ -337,6 +471,10 @@ $kasa-red: #FF6060;
         color: $kasa-red;
         font-size: 18px;
         margin: 5px 0;
+
+        @media (max-width: 480px) {
+          font-size: 14px;
+        }
       }
 
       >ul{
@@ -351,6 +489,10 @@ $kasa-red: #FF6060;
           color: white;
           border-radius: 10px;
           padding: 5px 30px;
+
+          @media (max-width: 480px) {
+            font-size: 10px;
+          }
         }
       }
     }
@@ -360,6 +502,14 @@ $kasa-red: #FF6060;
       flex-direction: column;
       align-items: flex-end;
       flex: 1 1 auto;
+
+      @media (max-width: 480px) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      
 
       >.user {
         display: flex;
@@ -374,12 +524,22 @@ $kasa-red: #FF6060;
           text-align: right;
           line-height: 26px;
           margin: 0 10px 0 0;
+
+          @media (max-width: 480px) {
+            font-size: 12px;
+            line-height: 142%;
+          }
         }
 
         >img{
           width: 64px;
           height: 64px;
           border-radius: 50%;
+
+          @media (max-width: 480px) {
+            width: 32px;
+            height: 32px;
+          }
         }
       }
 
@@ -387,6 +547,17 @@ $kasa-red: #FF6060;
         display: flex;
         gap: 10px;
         margin: 30px 0 0 0;
+
+        @media (max-width: 480px) {
+          margin: 0;
+          gap: 5px;
+        }
+
+        >img {
+          @media (max-width: 480px) {
+            height: 18px;
+          }
+        }
       }
     }
   }
@@ -396,7 +567,8 @@ $kasa-red: #FF6060;
     gap: 76px;
 
     >.collapse {
-      flex: 1 1 auto;
+      flex: 1 1 582px;
+      width: auto;
 
       > div.collapse-body {
         padding: 25px 15px;
