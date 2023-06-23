@@ -9,7 +9,7 @@ import bannerImg from "../assets/home-banner.jpg"
 function Home() {
 
     return (
-        <div>
+        <div className="main">
             <Header />
             <Banner bannerImg={bannerImg} bannerText='Chez vous, partout et ailleurs' />
             <div className='cards-background'>

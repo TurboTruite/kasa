@@ -3,7 +3,7 @@ import Footer from "../components/Footer"
 
 function PageNotFound() {
  return (
-    <div className="notFound">
+    <div className="main notFound">
         <Header />
         <p className="title">404</p>
         <p>Oups ! La page que vous demandez n'existe pas.</p>

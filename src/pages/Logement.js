@@ -44,7 +44,7 @@ function Logement() {
 
     return (
 
-        <>
+        <div className="main">
             <Header />
             <Gallery logement={logement} />
             <div className="logement-content">
@@ -84,7 +84,7 @@ function Logement() {
                 </div>                
             </div>
             <Footer />
-        </>
+        </div>
 
     )
 

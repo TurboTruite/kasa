@@ -7,7 +7,7 @@ import Collapse from '../components/Collapse'
 
 function About() {
     return (
-        <>
+        <div className="main">
             <Header />
             <div className='about-body'>
                 <Banner bannerImg={bannerImg} />
@@ -23,7 +23,7 @@ function About() {
     également des ateliers sur la sécurité domestique pour nos hôtes.</p>}/>
             </div>
             <Footer /> 
-        </>
+        </div>
     )
 
 }
