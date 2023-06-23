@@ -1,46 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Ca commence là */
-
-
-
 $kasa-red: #FF6060;
 $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.5) 100%);
 @mixin basic-font {
@@ -70,7 +27,6 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       height: 47px;
     }
   }
-
 }
 
 .footer {
@@ -181,11 +137,9 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
   @media (max-width: 480px) {
     background-color: white;
-    // padding: 0 19.5px;
     flex-direction: column;
     padding: 22px 19.5px 0 19.5px;
     gap: 20px;
-
     max-width: 100%;
   }
 }
@@ -196,11 +150,9 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 }
 
 .card {
-
   display: flex;
   align-items: flex-end;
   max-width: 340px;
-  // width: 100%;
   height: 340px;
 
   @media (max-width: 480px) {
@@ -211,18 +163,10 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
 
   >img {
-    // max-width: 300px;
-    // width: 100%;
-    // height: 300px;
     width: 100%;
     height: 100%;
     border-radius: 10px;
     object-fit: cover;
-
-    @media (max-width: 480px) {
-      // max-width: 100%;
-      // height: 255px;
-    }
   }
 
   .background--card {
@@ -236,21 +180,11 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     position: absolute;
     border-radius: 10px;
     padding: 20px;
-    // object-fit: cover;
     
-  
     @media (max-width: 480px) {
-      // max-width: 295px;
-      // max-height: 215px;
-      // max-width: calc(100%);
-      // max-height: calc(100% - 40px);
       max-width: calc(100% - 79.5px);
-      // width: calc(100% - 40px);
-
       height: 215px;
     }
-  
-    
   
     >a {
       @include basic-font;
@@ -262,15 +196,18 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
   }
 }
 
-
 .collapse {
   display: flex;
   overflow: hidden;
   flex-direction: column;
   max-width: 1013px;
+  max-height: 69px;
   border-radius: 5px;
-  margin: 15px auto;
+  margin: 0 auto 30px auto;
 
+  &.open {
+    max-height: 500px;
+  }
 
   >div.collapse-header {
     display: flex;
@@ -302,7 +239,6 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         }
       }
     }
-
   }
 
   >div.collapse-body {
@@ -317,13 +253,53 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     &.open {
       height: auto;
       transform: scaleY(1);
-
     }
 
     >p {
       @include basic-font;
       color: $kasa-red;
       margin: 0;
+    }
+  }
+}
+
+.about-body {
+  >.banner {
+
+    @media (max-width: 480px) {
+      height: 223px;
+      margin-bottom: 19px;
+    }
+  }
+
+  >.collapse {
+
+    &.open {
+      max-height: 500px;
+    }
+
+    @media (max-width: 480px) {
+    max-width: calc(100% - 40px);
+    margin: 0 auto 20px auto;
+    max-height: 47px;
+    }
+
+    >div.collapse-header {
+      >p{
+        @media (max-width: 480px) {
+        font-size: 13px;
+        }
+      }
+
+      img{
+        @media (max-width: 480px) {
+        width: 16px;
+        }
+      }
+    }
+
+    >div.collapse-body p{
+      font-size: 12px;
     }
   }
 }
@@ -336,7 +312,12 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     font-weight: 700;
     font-size: 288px;
     text-align: center;
-    margin: 139px 0;
+    margin: 139px auto;
+
+    @media (max-width: 480px) {
+      font-size: 96px;
+      margin: 113px auto;
+    }
   }
 
   >p {
@@ -344,6 +325,12 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     font-size: 36px;
     color: $kasa-red;
     text-align: center;
+    margin: 0 auto;
+    max-width: calc(100% - 100px);
+
+    @media (max-width: 480px) {
+      font-size: 18px;
+    }
   }
 
   >a {
@@ -352,10 +339,14 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     font-size: 18px;
     display: block;
     text-align: center;
-    margin: 139px 0;
+    margin: 139px auto;
+
+    @media (max-width: 480px) {
+      font-size: 14px;
+      margin: 113px auto;
+    }
   }
 } 
-
 
 .gallery {
   display: flex;
@@ -367,11 +358,9 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
   @media (max-width: 480px) {
     margin: 27px 20px 24px 20px;
-    max-width: 100%;
+    max-width: calc(100% - 20px);
     max-height: 355px;
   }
-
-
 
   >img {
     object-fit: cover;
@@ -398,8 +387,11 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     height: 100%;
     width: 100%;
     position: absolute;
-    // left: 0; top: 0; right: 0; bottom: 0;
+    @media (max-width: 480px) {
 
+      max-width: calc(100% - 20px);
+      max-height: 355px;
+    }
 
     >.leftArrow {
       position: absolute;
@@ -446,31 +438,28 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         display:none;
       }
 
-      
-
       &.hidden {
         display: none;
       }
     }
   }
-
 }
 
 .logement-content {
   max-width: 1240px;
   margin: auto;
 
-            @media (max-width: 480px) {
-            max-width: calc(100% - 40px);
-          }
+  @media (max-width: 480px) {
+    max-width: calc(100% - 40px);
+  }
 
   >.logement-header {
     display: flex;
+    margin-bottom: 13px;
+    
     @media (max-width: 480px) {
       flex-direction: column;
-      margin-bottom: 13px;
     }
-
 
     >.logement-header-gauche {
       display: flex;
@@ -516,6 +505,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
           @media (max-width: 480px) {
             font-size: 10px;
             border-radius: 5px;
+            padding: 5px 15px;
           }
         }
       }
@@ -532,8 +522,6 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         justify-content: space-between;
         align-items: center;
       }
-
-      
 
       >.user {
         display: flex;
@@ -592,17 +580,25 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
     @media (max-width: 480px) {
       flex-direction: column;
-      height: 100%;
       gap: 0;
     }
 
     >.collapse {
       flex: 1 1 582px;
       width: auto;
-      margin: 0;
+      margin-bottom: 50px;
+      max-height: 52px;
+
+      &.open {
+        max-height: 500px;
+      }
 
       @media (max-width: 480px) {
         flex: 1 1 auto;
+        height:min-content;
+        margin: 0 auto 20px auto;
+        width: 100%;
+        max-height: 37px;
       }
 
       > div.collapse-body {
@@ -621,7 +617,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
       > div.collapse-header {
         @media (max-width: 480px) {
-          padding: 7px;
+          padding: 10px;
           align-items: center;
         }
       }
@@ -647,9 +643,12 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         >li{
           @include basic-font;
           color: $kasa-red;
+
+          @media (max-width: 480px) {
+            font-size: 12px;
+            }
         }
       }
     }
   }
-
 }

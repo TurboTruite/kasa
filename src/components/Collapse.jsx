@@ -6,7 +6,7 @@ function Collapse({collapseTitle, collapseContent}) {
     const [open, setOpen] = useState(false)
 
     return (
-        <div className='collapse'>
+        <div className={open ? "collapse open" : "collapse"}>
             <div className="collapse-header">
                 <p>{collapseTitle}</p>
                 <button onClick={() => open ? setOpen(false) : setOpen(true)}>
