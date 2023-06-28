@@ -1,16 +1,13 @@
 import { useParams, Navigate } from 'react-router-dom'
 import logements from "../data/logements.json"
-import Gallery from '../components/Gallery'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import redStar from '../assets/redstar.png'
 import greyStar from '../assets/greystar.png'
 import Collapse from '../components/Collapse'
-
-
+import Carrousel from '../components/Carrousel'
 
 function Logement() {
-
 
     const { linkId } = useParams()
 
@@ -46,7 +43,7 @@ function Logement() {
 
         <div className="main">
             <Header />
-            <Gallery logement={logement} />
+            <Carrousel logement={logement} />
             <div className="logement-content">
                 <div className='logement-header'>
                     <div className='logement-header-gauche'>

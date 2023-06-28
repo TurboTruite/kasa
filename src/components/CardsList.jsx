@@ -5,7 +5,7 @@ function CardsList() {
     return (
         <>
             {logements.map((logement) => (
-                Card(logement) 
+                <Card logement={logement} key={logement.id}/> 
             ))}
         </>
     )

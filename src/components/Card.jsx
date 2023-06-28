@@ -2,9 +2,10 @@ import { Link } from "react-router-dom"
 import React from "react"
 
 function Card(props) {
-    const title=props.title
-    const id=props.id
-    const cover=props.cover
+    const logement = props.logement;
+    const title=logement.title
+    const id=logement.id
+    const cover=logement.cover
     return (
         <>
         <div className="card" key={id}>

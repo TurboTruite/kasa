@@ -3,7 +3,7 @@ import rightArrow from "../assets/right-arrow.png"
 import { useState } from "react"
 
 
-const Gallery = ({logement}) => {
+const Carrousel = ({logement}) => {
 
     const [current, setCurrent] = useState(0)
     const pictures = logement[0].pictures
@@ -37,4 +37,4 @@ const Gallery = ({logement}) => {
     )
 }
 
-export default Gallery
+export default Carrousel

@@ -52,8 +52,8 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
   @media (max-width: 480px) {
     gap: 0;
-    width: calc(100% + 40px);
-    left: -20px;
+    width: calc(100% + 20px);
+    left: -10px;
   }
 
   >p {
