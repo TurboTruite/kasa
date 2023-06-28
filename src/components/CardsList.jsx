@@ -8,7 +8,6 @@ function CardsList() {
                 Card(logement) 
             ))}
         </>
-
     )
 }
 
