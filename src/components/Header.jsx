@@ -7,8 +7,8 @@ function Header() {
         <div className='header'>
             <img src={logo} alt='logo Kasa'></img>
             <div className='navbar'>
-                <NavLink to="../" activeClassName="active">Accueil</NavLink>
-                <NavLink to="../about" activeClassName="active">A Propos</NavLink>
+                <NavLink to="../" activeclassname="active">Accueil</NavLink>
+                <NavLink to="../about" activeclassname="active">A Propos</NavLink>
             </div>
         </div>
     )

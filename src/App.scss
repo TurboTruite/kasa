@@ -159,11 +159,6 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
   }
 }
 
-// .cards-background::after {
-//   content: "";
-//   flex: auto;
-// }
-
 .card {
   display: flex;
   align-items: flex-end;
@@ -207,7 +202,6 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       font-size: 18px;
       color: white;
       text-decoration: none;
-      
     }
   }
 }
@@ -315,7 +309,11 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
 
     >div.collapse-body p{
-      font-size: 12px;
+      font-size: 18px;
+
+      @media (max-width: 480px) {
+        font-size: 12px;
+        }
     }
   }
 }

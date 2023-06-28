@@ -16,7 +16,6 @@ function Router() {
                 <Route path="/about" element={<About />} />
                 <Route path="/pageNotFound" element={<PageNotFound />} />
                 <Route path="*" element={<PageNotFound />} />
-
             </Routes>
         </BrowserRouter>
     </React.StrictMode>
