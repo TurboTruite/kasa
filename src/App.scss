@@ -1,7 +1,11 @@
-$kasa-red: #FF6060;
-$gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0.5) 100%);
+$kasa-red: #ff6060;
+$gradient: linear-gradient(
+  180deg,
+  rgba(255, 255, 255, 0) 0%,
+  rgba(0, 0, 0, 0.5) 100%
+);
 @mixin basic-font {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
@@ -27,8 +31,8 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     padding: 0;
     max-width: 100%;
   }
-  
-  >img {
+
+  > img {
     height: 68px;
 
     @media (max-width: 480px) {
@@ -49,14 +53,13 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
   width: calc(100% + 100px);
   left: -50px;
 
-
   @media (max-width: 480px) {
     gap: 0;
     width: calc(100% + 20px);
     left: -10px;
   }
 
-  >p {
+  > p {
     color: white;
     @include basic-font;
 
@@ -69,14 +72,14 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 }
 
 .navbar {
-  display:flex;
+  display: flex;
   gap: 57px;
 
   @media (max-width: 480px) {
     gap: 26px;
   }
 
-  >a {
+  > a {
     @include basic-font;
     text-decoration: none;
     color: $kasa-red;
@@ -113,15 +116,15 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     border-radius: 10px;
   }
 
-  >img {
-    flex-shrink:0;
-    min-height:100%;
+  > img {
+    flex-shrink: 0;
+    min-height: 100%;
     width: 100%;
     opacity: 0.7;
     object-fit: cover;
   }
 
-  >h1 {
+  > h1 {
     position: absolute;
     @include basic-font;
     font-size: 48px;
@@ -142,12 +145,12 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 .cards-background {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 60px;
   margin: 5px auto 50px auto;
   padding: 56px 50px 43px 50px;
   max-width: 1140px;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 25px;
 
   @media (max-width: 480px) {
@@ -172,8 +175,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     height: 255px;
   }
 
-
-  >img {
+  > img {
     width: 100%;
     height: 100%;
     border-radius: 10px;
@@ -191,13 +193,13 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     position: absolute;
     border-radius: 10px;
     padding: 20px;
-    
+
     @media (max-width: 480px) {
       max-width: calc(100% - 79.5px);
       height: 215px;
     }
-  
-    >a {
+
+    > a {
       @include basic-font;
       font-size: 18px;
       color: white;
@@ -219,7 +221,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     max-height: 500px;
   }
 
-  >div.collapse-header {
+  > div.collapse-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -228,22 +230,22 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     border: 0px;
     padding: 15px;
 
-    >p {
+    > p {
       @include basic-font;
       color: white;
       font-size: 32px;
       margin: 0;
     }
 
-    >button {
+    > button {
       border: 0;
       background-color: $kasa-red;
 
-      >img {
+      > img {
         margin: 0 6px;
         transform: rotate(0);
         transition: transform 300ms ease-in-out;
-  
+
         &.open {
           transform: rotate(180deg);
         }
@@ -251,8 +253,8 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
   }
 
-  >div.collapse-body {
-    background-color: #F7F7F7;
+  > div.collapse-body {
+    background-color: #f7f7f7;
     padding: 15px;
     border-radius: 0 0 5px 5px;
     height: 0;
@@ -265,7 +267,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       transform: scaleY(1);
     }
 
-    >p {
+    > p {
       @include basic-font;
       color: $kasa-red;
       margin: 0;
@@ -274,53 +276,51 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 }
 
 .about-body {
-  >.banner {
-
+  > .banner {
     @media (max-width: 480px) {
       height: 223px;
       margin-bottom: 19px;
     }
   }
 
-  >.collapse {
-
+  > .collapse {
     &.open {
       max-height: 500px;
     }
 
     @media (max-width: 480px) {
-    max-width: 100%;
-    margin: 0 auto 20px auto;
-    max-height: 47px;
+      max-width: 100%;
+      margin: 0 auto 20px auto;
+      max-height: 47px;
     }
 
-    >div.collapse-header {
-      >p{
+    > div.collapse-header {
+      > p {
         @media (max-width: 480px) {
-        font-size: 13px;
+          font-size: 13px;
         }
       }
 
-      img{
+      img {
         @media (max-width: 480px) {
-        width: 16px;
+          width: 16px;
         }
       }
     }
 
-    >div.collapse-body p{
+    > div.collapse-body p {
       font-size: 18px;
 
       @media (max-width: 480px) {
         font-size: 12px;
-        }
+      }
     }
   }
 }
 
-.notFound{
-  >.title {
-    font-family: 'Montserrat', sans-serif;
+.notFound {
+  > .title {
+    font-family: "Montserrat", sans-serif;
     color: $kasa-red;
     font-style: normal;
     font-weight: 700;
@@ -334,7 +334,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
   }
 
-  >p {
+  > p {
     @include basic-font;
     font-size: 36px;
     color: $kasa-red;
@@ -347,7 +347,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
   }
 
-  >a {
+  > a {
     @include basic-font;
     color: $kasa-red;
     font-size: 18px;
@@ -360,7 +360,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       margin: 113px auto;
     }
   }
-} 
+}
 
 .gallery {
   display: flex;
@@ -376,7 +376,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     max-height: 355px;
   }
 
-  >img {
+  > img {
     object-fit: cover;
     border-radius: 25px;
     height: 415px;
@@ -390,40 +390,38 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
 
     @media (max-width: 480px) {
-
       max-width: 100%;
       max-height: 355px;
     }
   }
 
-  >.galleryNav {
+  > .galleryNav {
     z-index: 1;
     height: 100%;
     width: 100%;
     position: absolute;
     @media (max-width: 480px) {
-
       max-width: 100%;
       max-height: 355px;
     }
 
-    >.leftArrow {
+    > .leftArrow {
       position: absolute;
       top: calc(50% - 40px);
       left: 25px;
 
-        @media (max-width: 480px) {
-          height: 20px;
-          top: 50%;
-          transform: translateY(-50%)
-        }
+      @media (max-width: 480px) {
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
 
-       &.hidden {
+      &.hidden {
         display: none;
-       }
+      }
     }
 
-    >.rightArrow {
+    > .rightArrow {
       position: absolute;
       top: calc(50% - 40px);
       right: 25px;
@@ -431,15 +429,15 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       @media (max-width: 480px) {
         height: 20px;
         top: 50%;
-        transform: translateY(-50%)
+        transform: translateY(-50%);
       }
 
-      &.hidden{
+      &.hidden {
         display: none;
       }
     }
 
-    >.pictureCounter {
+    > .pictureCounter {
       position: absolute;
       @include basic-font;
       color: white;
@@ -449,7 +447,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       transform: translateX(-50%);
 
       @media (max-width: 480px) {
-        display:none;
+        display: none;
       }
 
       &.hidden {
@@ -467,20 +465,20 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     max-width: 100%;
   }
 
-  >.logement-header {
+  > .logement-header {
     display: flex;
     margin-bottom: 13px;
-    
+
     @media (max-width: 480px) {
       flex-direction: column;
     }
 
-    >.logement-header-gauche {
+    > .logement-header-gauche {
       display: flex;
       flex: 1 1 auto;
       flex-direction: column;
 
-      >h2{
+      > h2 {
         margin: 0;
         @include basic-font;
         color: $kasa-red;
@@ -492,7 +490,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         }
       }
 
-      >p{
+      > p {
         @include basic-font;
         color: $kasa-red;
         font-size: 18px;
@@ -503,13 +501,13 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         }
       }
 
-      >ul{
+      > ul {
         display: flex;
         list-style-type: none;
         padding-inline: 0;
         gap: 10px;
 
-        >li{
+        > li {
           background-color: $kasa-red;
           @include basic-font;
           color: white;
@@ -525,7 +523,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       }
     }
 
-    >.logement-header-droite {
+    > .logement-header-droite {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
@@ -537,11 +535,11 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         align-items: center;
       }
 
-      >.user {
+      > .user {
         display: flex;
         align-items: center;
 
-        >p{
+        > p {
           display: block;
           max-width: 100px;
           @include basic-font;
@@ -557,7 +555,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
           }
         }
 
-        >img{
+        > img {
           width: 64px;
           height: 64px;
           border-radius: 50%;
@@ -569,7 +567,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         }
       }
 
-      >.rating {
+      > .rating {
         display: flex;
         gap: 10px;
         margin: 30px 0 0 0;
@@ -579,7 +577,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
           gap: 5px;
         }
 
-        >img {
+        > img {
           @media (max-width: 480px) {
             height: 18px;
           }
@@ -588,7 +586,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
     }
   }
 
-  >.logement-collapses {
+  > .logement-collapses {
     display: flex;
     gap: 76px;
 
@@ -597,7 +595,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
       gap: 0;
     }
 
-    >.collapse {
+    > .collapse {
       flex: 1 1 582px;
       width: auto;
       margin-bottom: 50px;
@@ -609,7 +607,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
 
       @media (max-width: 480px) {
         flex: 1 1 auto;
-        height:min-content;
+        height: min-content;
         margin: 0 auto 20px auto;
         width: 100%;
         max-height: 37px;
@@ -622,7 +620,7 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
           padding: 15px;
         }
 
-        >p {
+        > p {
           @media (max-width: 480px) {
             font-size: 12px;
           }
@@ -636,31 +634,31 @@ $gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(0, 0, 0, 0
         }
       }
 
-      >.collapse-header p{
-        font-size: 18px !important; 
-          @media (max-width: 480px) {
+      > .collapse-header p {
+        font-size: 18px !important;
+        @media (max-width: 480px) {
           font-size: 13px !important;
-          }
+        }
       }
 
-      >.collapse-header img{ 
-          @media (max-width: 480px) {
+      > .collapse-header img {
+        @media (max-width: 480px) {
           width: 16px;
-          }
+        }
       }
 
-      >.collapse-body ul{
+      > .collapse-body ul {
         list-style-type: none;
         padding-inline: 0;
         margin-block: 0;
 
-        >li{
+        > li {
           @include basic-font;
           color: $kasa-red;
 
           @media (max-width: 480px) {
             font-size: 12px;
-            }
+          }
         }
       }
     }
